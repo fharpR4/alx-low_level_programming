@@ -16,7 +16,7 @@ if (argc == 3)
 {
 night = atoi(argv[1]);
 burn = atoi(argv[2]);
-printf("%d\n", night * burn);
+printf("%d\n", night *burn);
 return (0);
 }
 printf("Error\n");
