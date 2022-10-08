@@ -5,38 +5,38 @@
 /**
  * alloc_grid - nested loop to make grid
  * @width: width input
- * @height: height input
+  * @height: height input
    * Return: pointer to a 2 dimensional array of integers.
-  */
+   */
 
 int **alloc_grid(int width, int height)
 {
-int **roe;
+int **night;
 int i, a;
 if (width <= 0 || height <= 0)
 return (NULL);
-roe = malloc(height * sizeof(int *));
-/* if roe is equal to Null return Null*/
-if (roe == NULL)
+night = malloc(height * sizeof(int *));
+/* if night is equal to Null return Null*/
+if (night == NULL)
 return (NULL);
 /*for every i thats 0 and less than height increase i*/
 for (i = 0; i < height; i++)
 {
-/*size of roe[i] using malloc*/
-roe[i] = malloc(width * sizeof(int));
-/*check if roe[i] is equal to Null*/
-if (roe[i] == NULL)
+/*size of night[i] using malloc*/
+night[i] = malloc(width * sizeof(int));
+/*check if night[i] is equal to Null*/
+if (night[i] == NULL)
 {
 while (i >= 0)
-/*free roe[i]*/
-free(roe[i--]);
-/* Free roe*/
-free(roe);
+/*free night[i]*/
+free(night[i--]);
+/* Free night*/
+free(night);
 return (NULL);
 }
 /*for every a that is less than width increase a*/
 for (a = 0; a < width; a++)
-roe[i][a] = 0;
+night[i][a] = 0;
 }
-return (roe);
+return (night);
 }
